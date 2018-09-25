@@ -1,0 +1,70 @@
+curl -X PUT \
+  http://aidoc-06.gft.com:9200/categories \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 6a7588c7-63a7-4a25-aa5d-263c38dd9b4b' \
+  -d '{
+  "mappings": {
+    "category": {
+      "properties": {
+      	"id": {
+          "type": "keyword"
+        },
+        "name": {
+          "type": "keyword"
+        },
+        "created": {
+          "type": "date"
+        },
+        "modified": {
+          "type": "date"
+        },
+        "label": {
+          "type": "keyword"
+        },
+        "color": {
+          "type": "keyword"
+        }
+        "tag_ml": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/categories/category \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "NULIDAD COMPRA ACCIONES"
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/categories/category \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "ESTAFAS"
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/categories/category \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "CONCILIACIÓN CLAÚSULA SUELO"
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/categories/category \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "BANCO DE ESPAÑA"
+}'
