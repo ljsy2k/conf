@@ -1,0 +1,190 @@
+curl -X PUT \
+  http://aidoc-06.gft.com:9200/entities \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 6a7588c7-63a7-4a25-aa5d-263c38dd9b4b' \
+  -d '{
+  "mappings": {
+    "category": {
+      "properties": {
+      	"id": {
+          "type": "keyword"
+        },
+        "name": {
+          "type": "keyword"
+        },
+        "created": {
+          "type": "date"
+        },
+        "modified": {
+          "type": "date"
+        },
+        "label": {
+          "type": "keyword"
+        },
+        "color": {
+          "type": "keyword"
+        }
+        "tag_ml": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/entities/entity \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "firstApplicantId",
+    "label": "Primer demandante",
+    "color": "#f3e372",
+    "tag_ml": "DNI_Demandante"
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/entities/entity \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "defendant",
+    "label": "Demandado",
+    "color": "#d74c8f",
+    "tag_ml": "Demandado"
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/entities/entity \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "bancofar",
+    "label": "Bancofar",
+    "color": "#fc867c",
+    "tag_ml": "Bancofar"
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/entities/entity \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "writtenAmount",
+    "label": "Cantidad escrita",
+    "color": "#22d07c",
+    "tag_ml": "Cuantia_esc"
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/entities/entity \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "secondApplicant",
+    "label": "Segundo demandante",
+    "color": "#570afc",
+    "tag_ml": "Otro_demandante"
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/entities/entity \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "court",
+    "label": "Juzgado",
+    "color": "#2b803e",
+    "tag_ml": "Juzgado"
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/entities/entity \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "indeterminate",
+    "label": "Indeterminada",
+    "color": "#7d52fd",
+    "tag_ml": "Indeterminada"
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/entities/entity \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "firstApplicant",
+    "label": "Primer demandante",
+    "color": "#f3e372",
+    "tag_ml": "Demandante"
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/entities/entity \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "procedure",
+    "label": "Nº Autos",
+    "color": "#aedcc5",
+    "tag_ml": "N_Auto"
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/entities/entity \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "lawyer",
+    "label": "Abogado",
+    "color": "#4452d9",
+    "tag_ml": "Abogado"
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/entities/entity \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "secondApplicantId",
+    "label": "DNI Segundo demandante",
+    "color": "#570afc",
+    "tag_ml": "DNI_Otro_demandante"
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/entities/entity \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "amount",
+    "label": "Cantidad",
+    "color": "#6de3e9",
+    "tag_ml": "Cuantia_num"
+}'
+
+curl -X POST \
+  http://aidoc-06.gft.com:9200/entities/entity \
+  -H 'Cache-Control: no-cache' \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 46cdc0c3-13a5-43cc-ba15-892b6e2f7107' \
+  -d '{
+    "name": "defendantId",
+    "label": "CIF Demandado",
+    "color": "#d74c8f",
+    "tag_ml": "CIF"
+}'
